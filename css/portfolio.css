@@ -33,8 +33,8 @@
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
-  color: var(--fttitle-text-color);
-  background: var(--ftprimary-wight-color);
+  color: var(--ptitle-text-color);
+  background: var(--pprimary-wight-color);
   border-radius: 4px;
 
   cursor: pointer;
@@ -44,8 +44,8 @@
 
 .button.filter:hover,
 .button.filter:focus {
-  color: var(--ftprimary-wight-color);
-  background-color: var(--ftaccent-pick-color);
+  color: var(--pprimary-wight-color);
+  background-color: var(--paccent-pick-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -89,6 +89,51 @@
   margin-right: 0;
 }
 
+.gl-item:hover .desc,
+.gl-item:hover .pic::before {
+  opacity: 1;
+}
+
+.gl-item:focus .desc,
+.gl-item:focus .pic::before {
+  opacity: 1;
+}
+
+.pic:hover:before {
+  opacity: 1;
+}
+
+.pic {
+  position: relative;
+}
+
+.pic::before {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  margin: 0;
+  content: '';
+  width: 100%;
+  height: 294px;
+  background-color: var(--pbg-img-cl);
+}
+
+.desc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--pprimary-wight-color);
+}
+
 .gallery .caption {
   border-top: none;
   border-right: 1px solid #eeeeee;
@@ -115,7 +160,7 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 1.88;
-  color: var(--ftprimary-text-color);
+  color: var(--pprimary-text-color);
   padding-top: 4px;
   margin: 0px;
 }

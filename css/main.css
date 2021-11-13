@@ -6,7 +6,7 @@
   padding: 200px 0;
   max-width: 1600px;
   height: 600px;
-  background-color: var(--background-grey-color);
+  background-color: var(--background-black-color);
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -168,6 +168,26 @@
 .work .item {
   width: calc((100% - 30px * 2) / 3);
   margin-right: 30px;
+  position: relative;
+}
+
+.work .text {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .work .item:nth-child(3n) {
@@ -223,18 +243,6 @@
 
 .team-block {
   background-color: #f5f4fa;
-}
-
-.link-social {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  color: var(--icon-cl);
-  border-radius: 50%;
-  background-color: var(--bgicon-cl);
-  padding: 12px;
 }
 
 .link-social:hover,
