@@ -39,6 +39,11 @@
   --ftaccent-pick-color: #2196f3;
   --ftprimary-wight-color: #f5f4fa;
   --ftbackground-black-color: #2f303a;
+
+  /* transition  */
+
+  --tr-ms: 250ms;
+  --tr-cb: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Body */
@@ -76,6 +81,14 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   width: 1200px;
+}
+
+/* Link */
+
+.link {
+  transition: color, background-color, border, fill;
+  transition-duration: var(--tr-ms);
+  transition-timing-function: var(--tr-cb);
 }
 
 /* Header */
@@ -135,10 +148,30 @@ body {
 }
 
 .site-nav .link {
+  position: relative;
+
   display: block;
   color: var(--hdtitle-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.site-nav .link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--hdaccent-pick-color);
+  border-radius: 2px;
+}
+
+.site-nav .link.current::after {
+  opacity: 1;
 }
 
 .site-nav .link:hover,
