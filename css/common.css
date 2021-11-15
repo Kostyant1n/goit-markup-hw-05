@@ -86,6 +86,7 @@ body {
 /* Link */
 
 .link {
+  outline: none;
   transition: color, background-color, border, fill;
   transition-duration: var(--tr-ms);
   transition-timing-function: var(--tr-cb);
