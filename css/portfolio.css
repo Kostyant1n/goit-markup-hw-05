@@ -11,6 +11,12 @@
   clip: rect(0 0 0 0);
 }
 
+/* Header */
+
+.page-header {
+   1px solid rgba(236, 236, 236, 1);
+}
+
 /* Button-filter */
 
 .button {
