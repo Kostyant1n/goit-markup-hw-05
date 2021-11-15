@@ -42,7 +42,7 @@
 
   /* transition  */
 
-  --tr-ms: 250ms;
+  --tr-ms: 2500ms;
   --tr-cb: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
